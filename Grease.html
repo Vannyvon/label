@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @page{
+            size: a4;
+             margin: 5mm;
+        }
+        .menu{
+            display: inline-flex;
+            justify-content: center;
+            gap: 20px;
+            margin-left: 45%;
+            margin-bottom: 20px;
+        }
+        .homebtn a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .box1, .box2, .box3 {
+           width: 370px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .box1 {
+           height: 120px;
+           background-color: rgb(255, 255, 255);
+           border: 1px solid black;
+           border-bottom: none;
+       }
+       .box2 {
+           height: 50px;
+           background-color: rgb(255, 255, 255);
+           border: 1px solid black;
+           border-bottom: none;
+       }
+       .box3 {
+           height: 50px;
+           background-color: rgb(255, 255, 255);
+           border: 1px solid black;
+       }
+       .bodyM{
+           display: grid;
+           grid-template-columns: 350px 350px;
+           justify-content: center;
+           align-content: center;
+       }
+       label{
+              font-size: 30px;
+              font-weight: bold;
+       }
+
+        #shape3 .box1,
+        #shape4 .box1 {
+           margin-top: 5px;
+       }
+       .box2 label {
+           font-size: 30px;
+           font-family: Khmer OS Bokor;
+       }
+       .box1 label {
+           font-size: 90px;
+       }
+       input {
+           width: 350px;
+           height: 60px;
+           margin-top: 5px;
+           border: 1px solid black;
+           border-radius: 5px;
+       }
+       .inform {
+           border: none;
+           border-radius: 10px;
+           padding: 20px;
+       }
+       .inform::backdrop {
+           background: rgba(0,0,0,0.5);
+       }
+       input[type="text"] {
+           display: block;
+           font-size: 15px;
+           box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.47), 0px 0px 0px 0px rgba(101, 74, 221, 0.19);
+           bottom: none;
+           align-items: center;
+       }
+       input[type="color"] {
+           display:inline;
+           width: 50px;
+           height: 50px;
+           padding: 0;
+           border: none;
+           border-radius: 2%;
+           cursor: pointer;
+       }
+       @media print {
+           #openModal {
+               display: none;
+           }
+           #printButton {
+                display: none;
+              }
+           #homebtn{
+               display: none;
+           }
+       }
+       .inform label {
+           display: inline;
+           margin-top: 10px;
+           font-size: 15px;
+           margin-top: -15px;
+       }
+       button {
+           margin-top: 10px;
+           margin-bottom: 10px;
+           width: 100%;
+           height: 50px;
+           border: 22px solid rgb(28, 14, 218);
+           background-color: #92db8f;
+           border: none;
+           border-radius: 20px;
+           font-size: 20px;
+           cursor: pointer;
+       }
+       button:hover {
+           background-color: #9814b9;
+           color:rgb(255, 255, 255);
+           font-weight: bold;
+           box-shadow: 5px 5px 10px rgba(83, 8, 182, 0.47), 0px 0px 0px 0px rgba(150, 44, 3, 0.19);
+
+       }
+       #closeModal {
+           background-color: rgb(255, 92, 92);
+           color: white;
+           margin-top: 20px;
+           width: 100%;
+           height: 50px;
+           border: 12px solid rgb(255, 0, 0);
+           background-color: #db0000;
+           border: none;
+           border-radius: 10px;
+           font-size: 20px;
+           cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+ <div class="menu">   
+    <button id="homebtn"><a href="index.html">Home</a></button>
+    <button id="openModal">Open Form</button>
+    <button id="printButton" onclick="window.print()">Print</button>
+ </div>
+ <div class="bodyM">   
+    <div id="shape1">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape2">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape3">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape4">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape4">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape4">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape4">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <div id="shape4">
+        <div class="box1"><label></label></div>
+        <div class="box2"><label></label></div>
+        <div class="box3"><label></label></div>
+    </div>
+    <dialog class="inform">
+        <h2>Grease Information</h2>
+        <input id="input1" type="text" placeholder="Input grease code: e.g. LY576">
+        <div>
+            <label for="colorText1">Color the Text:</label>
+            <input id="colorText1" type="color" value="#000000">
+            <label for="colorBg1">Color the box:</label>
+            <input id="colorBg1" type="color" value="#ffffff">
+        </div>
+        <input id="input2" type="text" placeholder="Input grease name in Khmer: e.g. ពណ៏ស">
+        <div>
+            <label for="colorText2">Color the Text:</label>
+            <input id="colorText2" type="color" value="#000000">
+            <label for="colorBg2">Color the box:</label>
+            <input id="colorBg2" type="color" value="#ffffff">
+        </div>
+        <input id="input3" type="text" placeholder="Input grease name in English: e.g. WHITE">
+        <div>
+            <label for="colorText3">Color the Text:</label>
+            <input id="colorText3" type="color" value="#000000">
+            <label for="colorBg3">Color the box:</label>
+            <input id="colorBg3" type="color" value="#ffffff">
+        </div>
+        <button id="save">Save</button>
+        <button id="closeModal" type="button">Close</button>
+    </dialog>
+ </div>   
+    <script>
+const modal = document.querySelector('.inform');
+const box1Labels = document.querySelectorAll('.box1 label');
+const box2Labels = document.querySelectorAll('.box2 label');
+const box3Labels = document.querySelectorAll('.box3 label');
+const box1s = document.querySelectorAll('.box1');
+const box2s = document.querySelectorAll('.box2');
+const box3s = document.querySelectorAll('.box3');
+const input1 = document.getElementById('input1');
+const input2 = document.getElementById('input2');
+const input3 = document.getElementById('input3');
+const colorText1 = document.getElementById('colorText1');
+const colorBg1 = document.getElementById('colorBg1');
+const colorText2 = document.getElementById('colorText2');
+const colorBg2 = document.getElementById('colorBg2');
+const colorText3 = document.getElementById('colorText3');
+const colorBg3 = document.getElementById('colorBg3');
+
+function updateLabels() {
+    const value1 = input1.value;
+    const value2 = input2.value;
+    const value3 = input3.value;
+
+    box1Labels.forEach(label => {
+        label.textContent = value1;
+        label.style.color = colorText1.value;
+    });
+    box1s.forEach(box => box.style.backgroundColor = colorBg1.value);
+
+    box2Labels.forEach(label => {
+        label.textContent = value2;
+        label.style.color = colorText2.value;
+    });
+    box2s.forEach(box => box.style.backgroundColor = colorBg2.value);
+
+    box3Labels.forEach(label => {
+        label.textContent = value3;
+        label.style.color = colorText3.value;
+    });
+    box3s.forEach(box => box.style.backgroundColor = colorBg3.value);
+}
+
+document.getElementById('closeModal').addEventListener('click', () => modal.close());
+document.getElementById('openModal').addEventListener('click', () => modal.showModal());
+
+[input1, input2, input3].forEach(input => {
+    input.addEventListener('input', () => {
+        input.value = input.value.toUpperCase();
+        updateLabels();
+    });
+});
+
+[colorText1, colorBg1, colorText2, colorBg2, colorText3, colorBg3].forEach(element => {
+    element.addEventListener('input', updateLabels);
+});
+
+document.getElementById('save').addEventListener('click', () => {
+    updateLabels();
+    input1.value = '';
+    input2.value = '';
+    input3.value = '';
+});
+
+    </script>
+</body>
+</html>
