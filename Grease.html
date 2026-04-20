@@ -10,11 +10,10 @@
              margin: 5mm;
         }
         .menu{
-            display: inline-flex;
+            display: flex;
             justify-content: center;
             gap: 20px;
-            margin-left: 45%;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
         .homebtn a{
             text-decoration: none;
@@ -93,8 +92,8 @@
            width: 50px;
            height: 50px;
            padding: 0;
-           border: none;
-           border-radius: 2%;
+           border: 2px solid blue;
+           border-radius: 5px;
            cursor: pointer;
        }
        @media print {
@@ -125,13 +124,19 @@
            border-radius: 20px;
            font-size: 20px;
            cursor: pointer;
+           color:rgb(42, 16, 191);
+           font-weight: bold;
        }
-       button:hover {
+       button a {
+           text-decoration: none;
+           color: rgb(42, 16, 191);
+           font-weight: bold;
+       }
+        button:hover {
            background-color: #9814b9;
            color:rgb(255, 255, 255);
            font-weight: bold;
            box-shadow: 5px 5px 10px rgba(83, 8, 182, 0.47), 0px 0px 0px 0px rgba(150, 44, 3, 0.19);
-
        }
        #closeModal {
            background-color: rgb(255, 92, 92);
@@ -150,7 +155,7 @@
 </head>
 <body>
  <div class="menu">   
-    <button id="homebtn"><a href="index.html">Home</a></button>
+    <a href="index.html"><button id="homebtn">Home</button></a>
     <button id="openModal">Open Form</button>
     <button id="printButton" onclick="window.print()">Print</button>
  </div>
