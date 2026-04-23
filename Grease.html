@@ -10,9 +10,10 @@
              margin: 5mm;
         }
         .menu{
-            display: flex;
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
             justify-content: center;
-            gap: 20px;
+            gap: 5px;
             margin-top: 20px;
         }
         .homebtn a{
@@ -21,7 +22,7 @@
             font-weight: bold;
         }
         .box1, .box2, .box3 {
-           width: 370px;
+           width: 370px; /*Adjust the width of the boxes, should be the same as the grid column width*/
            display: flex;
            justify-content: center;
            align-items: center;
@@ -45,7 +46,7 @@
        }
        .bodyM{
            display: grid;
-           grid-template-columns: 350px 350px;
+           grid-template-columns: 370px 370px;
            justify-content: center;
            align-content: center;
        }
@@ -106,6 +107,13 @@
            #homebtn{
                display: none;
            }
+           body {
+                background-color: transparent !important;
+                background-image: none !important;
+            }
+            #refreshbtn {
+                display: none;
+            }
        }
        .inform label {
            display: inline;
@@ -116,7 +124,7 @@
        button {
            margin-top: 10px;
            margin-bottom: 10px;
-           width: 100%;
+           width: 50%;
            height: 50px;
            border: 22px solid rgb(28, 14, 218);
            background-color: #92db8f;
@@ -153,10 +161,11 @@
        }
     </style>
 </head>
-<body>
+<body style="background: #3d0600;background: linear-gradient(90deg,rgba(61, 6, 0, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);">
  <div class="menu">   
     <a href="index.html"><button id="homebtn">🛖Home</button></a>
     <button id="openModal">📰Open Form</button>
+    <button id="refreshbtn" onclick="location.reload()">🚨Reset</button>
     <button id="printButton" onclick="window.print()">🖨️Print</button>
  </div>
  <div class="bodyM">   
